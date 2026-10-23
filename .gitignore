@@ -1,0 +1,5 @@
+node_modules
+.next
+out
+photos-raw/*
+!photos-raw/README.txt
