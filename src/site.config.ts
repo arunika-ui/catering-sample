@@ -37,7 +37,7 @@ export type Menu = {
   groups: { title: string; items: string[] }[];
 };
 
-export type Station = { name: string; note: string; image: string; alt: string };
+export type Station = { name: string; note: string; image?: string; alt?: string };
 
 export type GalleryItem = {
   src: string;
@@ -106,7 +106,7 @@ export const site = {
     title: ["The food your guests", "will *still talk about.*"],
     text: "From an intimate mehendi lunch to a reception for a thousand, we design the menu, run the counters and serve every plate — so you can be a guest at your own celebration.",
     image: "/images/hero.jpg",
-    alt: "A candle-lit buffet spread at an evening wedding",
+    alt: "A long banquet table laid for a wedding dinner under a white marquee",
     /** Small facts in the strip at the bottom of the hero */
     strip: ["Weddings", "Corporate", "Private parties", "Live counters"],
   },
@@ -121,9 +121,9 @@ export const site = {
       "Whether you want a classic North Indian spread, a pan-Asian cocktail evening or a menu that mixes both, you'll taste it before you finalise it.",
     ],
     imageLarge: "/images/story-1.jpg",
-    imageLargeAlt: "A chef finishing a plate in the kitchen",
+    imageLargeAlt: "A brass thali of mithai garnished with marigolds",
     imageSmall: "/images/story-2.jpg",
-    imageSmallAlt: "Close-up of a plated dish with garnish",
+    imageSmallAlt: "Fresh jalebi served with saffron rabri",
     /** Only add real, owner-confirmed numbers. Empty list hides the row. */
     stats: [
       // { value: "12+", label: "Years of catering" },
@@ -143,7 +143,7 @@ export const site = {
         "Family-style meals for the wedding-house days",
       ],
       image: "/images/occasion-weddings.jpg",
-      alt: "Guests at a wedding dinner under festoon lights",
+      alt: "A seaside wedding mandap draped in marigold and rajnigandha strings",
     },
     {
       id: "sangeet",
@@ -155,7 +155,7 @@ export const site = {
         "Late-night snacks for the dance floor",
       ],
       image: "/images/occasion-sangeet.jpg",
-      alt: "Canapés being passed at a cocktail evening",
+      alt: "A pink lounge set up for a sangeet under a striped canopy",
     },
     {
       id: "corporate",
@@ -167,7 +167,7 @@ export const site = {
         "GST invoicing and a single point of contact",
       ],
       image: "/images/occasion-corporate.jpg",
-      alt: "A buffet line at a corporate event",
+      alt: "Banquet tables dressed in ivory and gold for an evening dinner",
     },
     {
       id: "private",
@@ -179,7 +179,7 @@ export const site = {
         "Staff, crockery and cleanup included",
       ],
       image: "/images/occasion-private.jpg",
-      alt: "A dinner table set for a family celebration at home",
+      alt: "Round dinner tables beneath chandeliers and hanging greenery",
     },
     {
       id: "outdoor",
@@ -191,7 +191,7 @@ export const site = {
         "Coordination with your venue and décorator",
       ],
       image: "/images/occasion-outdoor.jpg",
-      alt: "Food counters set up on a farmhouse lawn at dusk",
+      alt: "A floral mandap and rows of seating on a garden lawn",
     },
   ] satisfies Occasion[],
 
@@ -203,7 +203,7 @@ export const site = {
       label: "Indian",
       intro: "Regional cooking done properly — slow dals, real tandoors, breads made to order.",
       image: "/images/menu-indian.jpg",
-      alt: "Copper serving bowls of Indian curries",
+      alt: "A food table dressed with marigolds and serving platters",
       groups: [
         { title: "From the tandoor", items: ["Galouti kebab", "Paneer tikka achari", "Murgh malai tikka", "Tandoori jhinga"] },
         { title: "Curries & dals", items: ["Dal makhani", "Nalli nihari", "Paneer lababdar", "Rajasthani gatte ki sabzi"] },
@@ -215,7 +215,7 @@ export const site = {
       label: "Global",
       intro: "Pan-Asian, Italian, Lebanese and Continental — cooked by chefs who specialise in them.",
       image: "/images/menu-global.jpg",
-      alt: "Plated dimsum and noodles",
+      alt: "Trays of canapés with tomato, mozzarella and olives",
       groups: [
         { title: "Pan-Asian", items: ["Crystal dimsum", "Thai green curry", "Hakka noodles", "Sushi display"] },
         { title: "Mediterranean", items: ["Mezze platter", "Falafel with tahini", "Chicken shawarma", "Fattoush"] },
@@ -227,7 +227,7 @@ export const site = {
       label: "Desserts",
       intro: "Halwai classics alongside a patisserie table.",
       image: "/images/menu-desserts.jpg",
-      alt: "A dessert table with Indian sweets and pastries",
+      alt: "A dessert counter with strawberry tarts, chocolates and fresh flowers",
       groups: [
         { title: "Halwai", items: ["Jalebi with rabri", "Moong dal halwa", "Shahi tukda", "Kesar kulfi"] },
         { title: "Patisserie", items: ["Tiramisu cups", "Baked cheesecake", "Chocolate mousse", "Macarons"] },
@@ -238,7 +238,7 @@ export const site = {
       label: "Beverages",
       intro: "Welcome drinks, mocktail bars and a chai counter that runs all night.",
       image: "/images/menu-beverages.jpg",
-      alt: "Mocktails lined up on a bar counter",
+      alt: "Tables set with glassware and white flowers under a garden marquee",
       groups: [
         { title: "Welcome", items: ["Aam panna", "Kokum sherbet", "Rose & litchi cooler", "Thandai"] },
         { title: "Through the night", items: ["Mocktail bar", "Masala chai counter", "Filter coffee", "Fresh juice station"] },
@@ -250,32 +250,36 @@ export const site = {
 
   /* ── Live counters ────────────────────────────────────────── */
   stations: [
-    { name: "Chaat", note: "Gol gappe, bhalla papdi, aloo tikki", image: "/images/station-chaat.jpg", alt: "Gol gappe being served at a chaat counter" },
-    { name: "Tandoor & kebab", note: "Skewers off the coals, rumali roti", image: "/images/station-tandoor.jpg", alt: "Kebabs on skewers over a tandoor" },
-    { name: "Wok & noodles", note: "Tossed to order on high flame", image: "/images/station-wok.jpg", alt: "A chef tossing noodles in a wok" },
-    { name: "Dimsum bar", note: "Steamed in bamboo baskets", image: "/images/station-dimsum.jpg", alt: "Bamboo steamers of dimsum" },
-    { name: "Pasta", note: "Your choice of sauce, made in front of you", image: "/images/station-pasta.jpg", alt: "Pasta being tossed in a pan" },
-    { name: "Shawarma", note: "Rotisserie-carved, wrapped fresh", image: "/images/station-shawarma.jpg", alt: "Shawarma being carved from a spit" },
-    { name: "Jalebi & rabri", note: "Fried fresh, served hot", image: "/images/station-jalebi.jpg", alt: "Jalebis being fried in a kadhai" },
+    { name: "Chaat", note: "Gol gappe, bhalla papdi, aloo tikki" },
+    { name: "Tandoor & kebab", note: "Skewers off the coals, rumali roti" },
+    { name: "Wok & noodles", note: "Tossed to order on high flame" },
+    { name: "Dimsum bar", note: "Steamed in bamboo baskets" },
+    { name: "Pasta", note: "Your choice of sauce, made in front of you" },
+    { name: "Shawarma", note: "Rotisserie-carved, wrapped fresh" },
+    { name: "Jalebi & rabri", note: "Fried fresh, served hot" },
   ] satisfies Station[],
+  /** One photo shown beside the live counters list */
+  stationsImage: "/images/stations.jpg",
+  stationsImageAlt: "An outdoor buffet counter beneath paper lanterns",
 
   /* ── Gallery ──────────────────────────────────────────────── *
    * Categories are built automatically from the items below.   */
   gallery: [
-    { src: "/images/gallery-01.jpg", alt: "Wedding buffet setup at night", category: "Setups", shape: "big" },
-    { src: "/images/gallery-02.jpg", alt: "Plated starters", category: "Food" },
-    { src: "/images/gallery-03.jpg", alt: "Guests at a sangeet", category: "Weddings", shape: "tall" },
-    { src: "/images/gallery-04.jpg", alt: "Dessert table", category: "Food" },
-    { src: "/images/gallery-05.jpg", alt: "Live counter in action", category: "Setups", shape: "wide" },
-    { src: "/images/gallery-06.jpg", alt: "Corporate lunch spread", category: "Corporate" },
-    { src: "/images/gallery-07.jpg", alt: "Mehendi lunch setup", category: "Weddings" },
-    { src: "/images/gallery-08.jpg", alt: "Chef plating a main course", category: "Food", shape: "tall" },
-    { src: "/images/gallery-09.jpg", alt: "Outdoor dinner on a lawn", category: "Setups" },
-    { src: "/images/gallery-10.jpg", alt: "Conference tea break", category: "Corporate", shape: "wide" },
-    { src: "/images/gallery-11.jpg", alt: "Reception dinner", category: "Weddings" },
-    { src: "/images/gallery-12.jpg", alt: "Mocktail bar", category: "Food", shape: "wide" },
+    { src: "/images/gallery-01.jpg", alt: "Guests under a glass marquee as a couple takes their vows", category: "Weddings", shape: "big" },
+    { src: "/images/menu-global.jpg", alt: "Trays of canapés", category: "Food" },
+    { src: "/images/gallery-02.jpg", alt: "A temple-style mandap at dusk", category: "Weddings", shape: "tall" },
+    { src: "/images/story-2.jpg", alt: "Jalebi with saffron rabri", category: "Food" },
+    { src: "/images/occasion-sangeet.jpg", alt: "A sangeet lounge under a striped canopy", category: "Setups", shape: "wide" },
+    { src: "/images/menu-desserts.jpg", alt: "A dessert counter with strawberry tarts", category: "Food" },
+    { src: "/images/gallery-04.jpg", alt: "Ceremony seating facing a floral mandap", category: "Weddings" },
+    { src: "/images/gallery-03.jpg", alt: "A floral swing set beside the sea", category: "Setups", shape: "tall" },
+    { src: "/images/menu-indian.jpg", alt: "A food table dressed with marigolds", category: "Food" },
+    { src: "/images/stations.jpg", alt: "An outdoor buffet beneath paper lanterns", category: "Setups", shape: "wide" },
+    { src: "/images/story-1.jpg", alt: "A thali of mithai with marigolds", category: "Food" },
+    { src: "/images/menu-beverages.jpg", alt: "Tables under a garden marquee", category: "Setups", shape: "wide" },
   ] satisfies GalleryItem[],
 
+  galleryEyebrow: "Moments & setups", // use "From recent events" once these are the caterer's own photos
   /* ── How it works ─────────────────────────────────────────── *
    * Confirm each step matches how the caterer actually works. */
   process: [

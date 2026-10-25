@@ -59,7 +59,7 @@ export function Gallery() {
       <div className="mb-12 grid gap-8 md:grid-cols-12 md:items-end">
         <div className="md:col-span-7">
           <p className="eyebrow mb-6 text-accent" data-reveal>
-            From recent events
+            {site.galleryEyebrow}
           </p>
           <h2 id="gallery-title" className="font-display text-[clamp(2.4rem,5.6vw,5rem)] leading-[1]" data-lines>
             <span className="line-mask">

@@ -3,4 +3,5 @@ node_modules
 out
 photos-raw/*
 !photos-raw/README.txt
+!photos-raw/map.txt
 *.tsbuildinfo

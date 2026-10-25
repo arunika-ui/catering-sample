@@ -1,0 +1,18 @@
+# source file                                              slot
+pexels-perry-2164439915-39820686.jpg                       hero
+pexels-yankrukov-8819769.jpg                               story-1
+pexels-jahratreza-39193454.jpg                             story-2
+pexels-aumgraphy-39797465.jpg                              occasion-weddings
+pexels-zephyrevents-32866206.jpg                           occasion-sangeet
+pexels-thevisionaryvows-33914522.jpg                       occasion-corporate
+pexels-valeriya-18573172.jpg                               occasion-private
+pexels-zephyrevents-32866210.jpg                           occasion-outdoor
+pexels-jonathanborba-37976953.jpg                          menu-indian
+pexels-sejio402-29226723.jpg                               menu-global
+pexels-marina-ribeiro-decoracoes-1081262752-20609913.jpg   menu-desserts
+pexels-harold-productions-74516182-12889989.jpg            menu-beverages
+pexels-photography-maghradze-ph-1659410-27025523.jpg       stations
+pexels-jonathanborba-9714792.jpg                           gallery-01
+pexels-aumgraphy-39797464.jpg                              gallery-02
+pexels-aumgraphy-39797458.jpg                              gallery-03
+pexels-aumgraphy-38254676.jpg                              gallery-04

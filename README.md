@@ -12,7 +12,11 @@ A one-page catering website (Next.js, TypeScript, Tailwind CSS, GSAP) built to b
 
 ## Photos
 
-Put originals in `/photos-raw` with these names, run `npm run images`, and they are resized into `/public/images`. Any missing photo shows a labelled placeholder.
+**Colour-graded (recommended):** put originals in `/photos-raw`, list them in `photos-raw/map.txt` as `<file> <slot>`, then run `python3 scripts/grade-images.py`. Every photo gets the same warm grade so mixed sources look like one shoot, and is resized into `/public/images`.
+
+**Plain resize:** name originals after the slots below and run `npm run images`.
+
+Any missing photo shows a labelled placeholder.
 
 | Slot | Shape | Ideal subject |
 |---|---|---|
@@ -21,7 +25,7 @@ Put originals in `/photos-raw` with these names, run `npm run images`, and they 
 | `story-2` | landscape | Close-up of a signature dish |
 | `occasion-weddings`, `-sangeet`, `-corporate`, `-private`, `-outdoor` | portrait | One per event type |
 | `menu-indian`, `-global`, `-desserts`, `-beverages` | portrait | One per cuisine tab |
-| `station-chaat`, `-tandoor`, `-wok`, `-dimsum`, `-pasta`, `-shawarma`, `-jalebi` | portrait | Live counters in action |
+| `stations` | landscape | A live counter or buffet in action |
 | `gallery-01` … `gallery-12` | any | Mix of food, setups and events |
 
 You can reuse a photo in several slots by pointing the config at the same file.

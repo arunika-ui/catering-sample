@@ -9,7 +9,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Photo src={hero.image} alt={hero.alt} priority sizes="100vw" dataAttr={{ "data-hero-image": "" }} />
         {/* Darken the lower-left where the text sits so it stays readable on any photo */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(20,15,11,0.88)_0%,rgba(20,15,11,0.45)_42%,rgba(20,15,11,0.15)_70%,rgba(20,15,11,0.35)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(20,15,11,0.9)_0%,rgba(20,15,11,0.66)_45%,rgba(20,15,11,0.32)_75%,rgba(20,15,11,0.45)_100%)] md:bg-[linear-gradient(to_top,rgba(20,15,11,0.88)_0%,rgba(20,15,11,0.55)_42%,rgba(20,15,11,0.2)_70%,rgba(20,15,11,0.38)_100%)]" />
       </div>
 
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pt-32 pb-10 md:px-10 md:pb-14">
